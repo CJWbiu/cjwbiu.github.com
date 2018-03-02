@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="./js/snap.svg.js"></script>
+    <script src="./js/jquery.js"></script>
+    <link rel="shotcut icon" href="./favio.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/pc.css" media="screen and (min-width: 900px)">
+    <link rel="stylesheet" href="./css/phone.css" media="screen and (max-width: 900px)">
+</head>
+<body>
+<audio autoplay loop>
+    <source src="./audio/RADWIMPS .mp3">
+    <source src="./audio/RADWIMPS .ogg">
+    <source src="./audio/RADWIMPS .wav">
+</audio>
+<div class="loading">
+    <div class="line-wrapper">
+        <div class="line line-3">
+        <div class="line line-2">
+            <div class="line line-1"></div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="slide-box">
+    <!-- 悬浮头像 -->
+    <div class="floatHead">
+        <a href="https://github.com/CJWbiu" class="homepage">
+            <img src="./image/me.jpg" alt="me" width="62px">
+            <div class="text">
+                <span class="bold">CJWbiu</span>'s resume
+            </div>
+        </a>
+    </div>
+    <!-- 图片展示 -->
+    <div class="item-wrapper">
+        <div class="item indexPage">
+            <img src="./image/1.jpg" class="bground">
+            <div class="centerShow">
+                <h2 class="animate-title"><em>H</em><em>e</em><em>l</em><em>l</em><em>o,</em><em>I'</em><em>m </em><em>C</em><em>J</em><em>W</em><em>b</em><em>i</em><em>u</em></h2>
+                <p>我叫程杰文</p>
+                <p>一个热爱前端的人</p>
+                <p class="email">1719064252@qq.com</p>
+            </div>
+        </div>
+        <div class="item aboutMe">
+            <img src="./image/2.jpg" class="bground">
+            <h3 class="item-title"><span class="text-line">关于我</span></h3>
+            <div class="content">
+                <img class="avatar" src="./image/avatar.jpg" alt="me" width="200px">
+                <p>我叫程杰文，95年，湖南科技大学网络工程专业18届毕业生，虽然不是前端的专业，但是我对前端很感兴趣，由于也是计算机专业，学习过c/c++、java等各类编程语言，这也让我有了一点入门基础，之后自学前端，也学习过Node、PHP等后端语言，对MySQL、MongoDB也有所了解，今后的职业规划是能往全栈发展。</p>
+            </div>
+        </div>
+        <div class="item mySkills">
+            <img src="./image/3.jpg" class="bground">
+            <h3 class="item-title"><span class="text-line">技能掌握</span></h3>
+            <div class="content">
+                <div class="left">
+                    <ul class="skill-list">
+                        
+                    </ul>
+                </div>
+                <div id="diagram">
+                    <svg id="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="600" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                        <circle cx="300" cy="300" r="85" fill="#193340" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                        <text id="text" x="300" y="306.9999895095825" text-anchor="middle" font="20px Arial" stroke="none" fill="#ffffff" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 20px; line-height: normal; font-family: Arial; opacity: 1;" opacity="1">
+                            <tspan id="content" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Skills</tspan>
+                        </text>
+                        <path data-info="30" class="circle" id="Node" fill="none" stroke="#bedbe9" d="M108.87826273287695,326.8604084852926A193,193,0,0,1,333.5140982897176,109.93210366864386" stroke-width="26"  opacity="1" style="z-index: 9"></path>
+                         <path data-info="65" class="circle" id="Vue" fill="none" stroke="#97be0d" d="M199.250797124418,278.5850958457708A103,103,0,1,1,341.8938742368074,394.09518213718786" stroke-width="26"  opacity="1" style="z-index: 6"></path>
+                        <path data-info="80" class="circle" id="JavaScript" fill="none" stroke="#d7d8d8" d="M270.081509772266,170.4087813835637A133,133,0,1,1,167.50610515379785,288.4082862145615" stroke-width="26"  opacity="1" style="z-index: 7"></path>
+                        <path data-info="75" class="circle" id="jQuery" fill="none" stroke="#d3d671" d="M171.55424716210428,400.3528204780822A163,163,0,1,1,400.3528204780823,428.4457528378957" stroke-width="26"  opacity="1" style="z-index: 8"></path>
+                        <path data-info="80" class="circle" id="HTML_CSS" fill="none" stroke="#e4a787" d="M79.74550004728431,265.1151142960285A223,223,0,1,1,198.76011855808107,498.69445489400607" stroke-width="26"  opacity="1" style="z-index: 10"></path> 
+                    </svg>
+                </div>
+                <script>
+                    (function() {
+                        var arr = ['Node','Vue','HTML_CSS','jQuery','JavaScript'];
+                        var svg = Snap("#svg");
+                        arr.map(item => {
+                            var one = Snap("#" + item);
+                            one.mouseover(function() {
+                                svg.append(this);
+                                this.animate({
+                                    strokeWidth: 50,
+                                    opacity: 0.75
+                                },200,function() {
+                                    Snap("#content").node.innerHTML = this.node.id + " " + this.node.attributes[0].value + "%";
+                                })
+                            })
+                            one.mouseout(function() {
+                                this.animate({
+                                    strokeWidth: 26,
+                                    opacity: 1
+                                },200,function() {
+                                    Snap("#content").node.innerHTML = "Skills";
+                                })
+                            })
+                        })
+                    })()
+                </script>
+            </div>
+        </div>
+        <div class="item myOpus">
+            <img src="./image/4.jpg" class="bground">
+            <h3 class="item-title"><span class="text-line">作品展示</span></h3>
+            <div class="content">
+                <div class="opus-show">
+                    <div class="opus">
+                        <div class="opus-item">
+                            <img class="new" src="./image/totoro.png">
+                            <div class="caption">
+                                <h2 class="title">Totoro社区</h2>
+                                <p class="desc">一个使用PHP+MySQL实现的一个博客系统，前端使用原生JavaScript实现交互，通过ajax请求完成各类信息的验证，可切换主题样式。</p>
+                                <p class="desc">
+                                    <a class="btn btn-lg btn-primary" href="http://www.pinkbluecp.cn/" target="_blank">点我访问</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="control">
+                        <li class="dot active" data-index="0"></li>
+                        <li class="dot" data-index="1"></li>
+                        <li class="dot" data-index="2"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="item contactMe">
+            <img src="./image/5.jpg" class="bground">
+            <div class="content">
+                <div class="content-inner">
+                    <div class="top-r"></div>
+                    <div class="container">
+                        <h1 class="title"><span class="color">CONTACT</span>  ME</h1>
+                        <div class="text-wrapper">
+                            <p class="big-text">
+                                <span class="b-1">奋斗</span>
+                                <span class="b-2">代码</span>
+                                <span class="b-3">梦想</span>
+                                <span class="b-4">未来</span>
+                            </p>
+                            <p class="text">
+                                热爱前端，热爱生活<br>
+                                喜欢不断尝试新鲜事物<br>
+                                兴趣是最大的动力来源<br>
+                                期待有机会与您共事
+                            </p>
+                        </div>
+                        <ul class="contact-info">
+                            <li>
+                                <div class="tips">邮箱</div>
+                                <a class="link" href="mailto:1719064252@qq.com"><span class="icon-email"></span></a>
+                            </li>
+                            <li>
+                                <div class="tips">github</div>
+                                <a class="link" href="https://github.com/CJWbiu"><span class="icon-github"></a>
+                            </li>
+                            <li>
+                                <div class="tips">1719064252</div>
+                                <a class="link" href="javascript:;"><span class="icon-qq"></a>
+                            </li>
+                            <li>
+                                <div class="tips">1719064252</div>
+                                <a class="link" href="javascript:;"><span class="icon-wechat"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+        </div>
+        <div class="nextpage">
+            <img src="./image/down.png" width="30px">
+        </div>
+    </div>
+    <!-- aside btn -->
+    <div class="aside-btns">
+        <span class="aside-btn-item btn-active" data-index="0"></span>
+        <span class="aside-btn-item" data-index="1"></span>
+        <span class="aside-btn-item" data-index="2"></span>
+        <span class="aside-btn-item" data-index="3"></span>
+        <span class="aside-btn-item" data-index="4"></span>
+    </div>
+    <!-- player btn -->
+    <div class="music-play">
+        <span class="m-control play" style="display: none;"></span>
+        <span class="m-control stop" style="display: block;"></span>
+    </div>
+    <script>
+        (function() {
+            $('.stop').click(function() {
+                $('audio').get(0).pause();
+                $(this).hide().prev().show();
+            })
+            $('.play').click(function() {
+                $('audio').get(0).play();
+                $(this).hide().next().show();
+            })
+        })()
+    </script>
+    <!-- 控制按钮 -->
+    <ul class="slide-btn"></ul>
+</div>
+<script src="./js/main.js"></script>  
+</body>
+</html>
